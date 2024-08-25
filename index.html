@@ -74,10 +74,15 @@
             font-size: 18px;
             font-weight: bold;
         }
+        #imagem {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <h1> aceita um bolinho de chocolate meu quinta-feira? </h1>
+    <h1>Você aceita um bolinho de chocolate meu quinta-feira? 💙</h1>
     <button id="sim">Sim</button>
     <button id="nao" onclick="moverNao()">Não</button>
 
@@ -98,13 +103,15 @@
     <div class="coracao" id="coracao15">❤️</div>
 
     <div id="recado">Kauan: para:bolo</div>
-    <div id="mensagem" class="hidden">❣️❣️ vou levar esse bolinho pra você kk🍰💙</div>
+    <div id="mensagem" class="hidden">Aee vou levar esse bolinho pra você 🍰💙</div>
+    <img id="imagem" class="hidden" src="https://raw.githubusercontent.com/Kauan10830/Prashay/main/bolinho_chocolate.jpg" alt="Bolinho de Chocolate">
 
     <script>
         let estado = 0;
         const botaoNao = document.getElementById('nao');
         const botaoSim = document.getElementById('sim');
         const mensagem = document.getElementById('mensagem');
+        const imagem = document.getElementById('imagem');
 
         function moverNao() {
             switch (estado) {
@@ -130,6 +137,7 @@
 
         botaoSim.addEventListener('click', function() {
             mensagem.classList.remove('hidden');
+            imagem.classList.remove('hidden');
         });
     </script>
 </body>
